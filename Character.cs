@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -8,7 +9,7 @@ namespace _17PraktDemonApparationDestroyerCommanderNineMice
 {
     internal abstract class Character
     {
-        private int _maxHP;
+        private int _maxHP ;
         private int _hp;
         private string _name;
         private int _minDamage;
@@ -21,11 +22,12 @@ namespace _17PraktDemonApparationDestroyerCommanderNineMice
         public int MinDamage { get { return _minDamage; } set { _minDamage = value; } }
         public int MaxDamage { get { return _maxDamage; } set { _maxDamage = value; } }
         public int MaxHP { get { return _maxHP; } set { _maxHP = value; } }
+        
 
         public virtual int GetAttackDamage()
         {
             Random rnd = new Random();
-            return rnd.Next(MinDamage, MaxDamage);
+            return rnd.Next(MinDamage, MaxDamage + 1);
         }
 
         public virtual int TakeDamage(int damage)
@@ -41,7 +43,7 @@ namespace _17PraktDemonApparationDestroyerCommanderNineMice
         public Character(int maxHP, int hp, string name, int minDamage, int maxDamage)
         {
             MaxHP = maxHP;
-            _hp = hp;
+            HP = hp;
             Name = name;
             MinDamage = minDamage;
             MaxDamage = maxDamage;

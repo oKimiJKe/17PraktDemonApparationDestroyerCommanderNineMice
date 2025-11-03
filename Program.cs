@@ -11,19 +11,20 @@
                 name: "Герой",
                 maxhp: 100,
                 hp: 100,
-                mindmg: 15,
-                maxdmg: 25,
-                heal: 20,
+                mindmg: 30,
+                maxdmg: 50,
+                heal: 3,
                 xDamage: 2.5,
                 specialAttack: false
             );
 
+
             Monster monster = new Monster(
-                name: "Древний Дракон",
-                maxhp: 150,
-                hp:150,
-                mindamage: 10,
-                maxdmg: 35
+                name: "Админ",
+                maxhp: 1000,
+                hp:1000,
+                mindamage: 1,
+                maxdmg: 5
             );
 
             Game game = new Game( monster,player);
