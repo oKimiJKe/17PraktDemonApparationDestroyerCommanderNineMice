@@ -22,7 +22,6 @@ namespace _17PraktDemonApparationDestroyerCommanderNineMice
             _monster = monster;
             _player = player;
             _isGameStart = false;
-            int turn = 0;
         }
 
         public void StartGame()
